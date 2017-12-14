@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+public class GerarArqGrad extends ItemMenu {
+
+    @Override
+    public String getDescricao() {
+        return "6. Gerar arquivo com dados dos alunos de graduação cadastrados, ordenado em ordem crescente\n"
+                + "de RGA";
+    }
+
+    public boolean executar() {
+        Scanner sc = new Scanner(System.in);
+        String arquivo;
+        System.out.println("Informe o nome do arquivo destino: ");
+        arquivo = sc.nextLine();
+        Listagem a = new ListagemImplement();
+        a.gerarArquivoGrad(arquivo);
+
+        return false;
+
+    }
+}
